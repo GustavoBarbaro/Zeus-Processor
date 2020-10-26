@@ -1,2 +1,2 @@
 
-![Zeus-Processor](./Images/ZeusProcessor.png)
+![Zeus-Processor](./Images/ZeusProcessor_Grande.png)
