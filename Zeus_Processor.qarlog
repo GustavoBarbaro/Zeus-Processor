@@ -1,0 +1,37 @@
+Quartus Prime Archive log --	C:/Users/gusta/Desktop/Zeus/Zeus_Processor.qarlog
+
+Archive:	C:/Users/gusta/Desktop/Zeus/Zeus_Processor.qar
+Date:		Thu Oct 22 20:25:35 2020
+Quartus Prime		17.1.0 Build 590 10/25/2017 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/Users/gusta/Desktop/Zeus/ALU.v
+C:/Users/gusta/Desktop/Zeus/ALU_teste.vwf
+C:/Users/gusta/Desktop/Zeus/Alu_Control.v
+C:/Users/gusta/Desktop/Zeus/Banco_Registradores.v
+C:/Users/gusta/Desktop/Zeus/Banco_Registradores.vwf
+C:/Users/gusta/Desktop/Zeus/Extensor.v
+C:/Users/gusta/Desktop/Zeus/Extensor_teste.vwf
+C:/Users/gusta/Desktop/Zeus/Memoria_de_Dados.v
+C:/Users/gusta/Desktop/Zeus/Memoria_de_Dados_teste.vwf
+C:/Users/gusta/Desktop/Zeus/Memoria_de_instrucoes.v
+C:/Users/gusta/Desktop/Zeus/Memoria_de_instrucoes_teste.vwf
+C:/Users/gusta/Desktop/Zeus/Mux_32b.v
+C:/Users/gusta/Desktop/Zeus/Mux_5b.v
+C:/Users/gusta/Desktop/Zeus/PC.v
+C:/Users/gusta/Desktop/Zeus/Program_Counter.v
+C:/Users/gusta/Desktop/Zeus/Program_Counter_teste.vwf
+C:/Users/gusta/Desktop/Zeus/Unidade_de_Controle.v
+C:/Users/gusta/Desktop/Zeus/Unidade_de_Controle_Teste.vwf
+C:/Users/gusta/Desktop/Zeus/Zeus_Processor.qpf
+C:/Users/gusta/Desktop/Zeus/Zeus_Processor.qsf
+C:/Users/gusta/Desktop/Zeus/Zeus_Processor.v
+C:/Users/gusta/Desktop/Zeus/Zeus_Processor_teste.vwf
+C:/Users/gusta/Desktop/Zeus/single_port_rom_init.txt
+C:/Users/gusta/Desktop/Zeus/testando_cont_pc.v
+C:/Users/gusta/Desktop/Zeus/testando_cont_pc_teste.vwf
+c:/intelfpga_lite/17.1/quartus/bin64/assignment_defaults.qdf
+	======= Total: 26 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

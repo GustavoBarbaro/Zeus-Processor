@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Thu Oct 22 20:16:37 2020
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+Revision Name : Zeus_Processor
+Top-level Entity Name : Zeus_Processor
+Family : Cyclone IV E
+Total logic elements : 2,158
+    Total combinational functions : 1,861
+    Dedicated logic registers : 409
+Total registers : 409
+Total pins : 225
+Total virtual pins : 0
+Total memory bits : 8,704
+Embedded Multiplier 9-bit elements : 6
+Total PLLs : 0

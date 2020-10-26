@@ -1,0 +1,363 @@
+// Copyright (C) 2017  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "10/22/2020 03:21:15"
+                                                                                
+// Verilog Test Bench (with test vectors) for design :                          Memoria_de_Dados
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module Memoria_de_Dados_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg Mem_Read;
+reg Mem_Write;
+reg [31:0] data;
+reg [7:0] endereco_escrita;
+reg [7:0] read_addr;
+reg read_clock;
+reg write_clock;
+// wires                                               
+wire [31:0] lendo_dados;
+
+// assign statements (if any)                          
+Memoria_de_Dados i1 (
+// port map - connection between master ports and signals/registers   
+	.Mem_Read(Mem_Read),
+	.Mem_Write(Mem_Write),
+	.data(data),
+	.endereco_escrita(endereco_escrita),
+	.lendo_dados(lendo_dados),
+	.read_addr(read_addr),
+	.read_clock(read_clock),
+	.write_clock(write_clock)
+);
+initial 
+begin 
+#1000000 $finish;
+end 
+
+// read_clock
+initial
+begin
+	repeat(6)
+	begin
+		read_clock = 1'b0;
+		read_clock = #80000 1'b1;
+		# 80000;
+	end
+	read_clock = 1'b0;
+end 
+
+// write_clock
+initial
+begin
+	repeat(6)
+	begin
+		write_clock = 1'b0;
+		write_clock = #80000 1'b1;
+		# 80000;
+	end
+	write_clock = 1'b0;
+end 
+
+// Mem_Read
+initial
+begin
+	Mem_Read = 1'b0;
+	Mem_Read = #540000 1'b1;
+	Mem_Read = #440000 1'b0;
+end 
+
+// Mem_Write
+initial
+begin
+	Mem_Write = 1'b0;
+	Mem_Write = #50000 1'b1;
+	Mem_Write = #450000 1'b0;
+end 
+// data[ 31 ]
+initial
+begin
+	data[31] = 1'b0;
+end 
+// data[ 30 ]
+initial
+begin
+	data[30] = 1'b1;
+end 
+// data[ 29 ]
+initial
+begin
+	data[29] = 1'b1;
+end 
+// data[ 28 ]
+initial
+begin
+	data[28] = 1'b0;
+end 
+// data[ 27 ]
+initial
+begin
+	data[27] = 1'b0;
+end 
+// data[ 26 ]
+initial
+begin
+	data[26] = 1'b1;
+end 
+// data[ 25 ]
+initial
+begin
+	data[25] = 1'b1;
+end 
+// data[ 24 ]
+initial
+begin
+	data[24] = 1'b0;
+end 
+// data[ 23 ]
+initial
+begin
+	data[23] = 1'b0;
+end 
+// data[ 22 ]
+initial
+begin
+	data[22] = 1'b0;
+end 
+// data[ 21 ]
+initial
+begin
+	data[21] = 1'b0;
+end 
+// data[ 20 ]
+initial
+begin
+	data[20] = 1'b0;
+end 
+// data[ 19 ]
+initial
+begin
+	data[19] = 1'b0;
+end 
+// data[ 18 ]
+initial
+begin
+	data[18] = 1'b0;
+end 
+// data[ 17 ]
+initial
+begin
+	data[17] = 1'b0;
+end 
+// data[ 16 ]
+initial
+begin
+	data[16] = 1'b0;
+end 
+// data[ 15 ]
+initial
+begin
+	data[15] = 1'b0;
+end 
+// data[ 14 ]
+initial
+begin
+	data[14] = 1'b0;
+end 
+// data[ 13 ]
+initial
+begin
+	data[13] = 1'b0;
+end 
+// data[ 12 ]
+initial
+begin
+	data[12] = 1'b0;
+end 
+// data[ 11 ]
+initial
+begin
+	data[11] = 1'b0;
+end 
+// data[ 10 ]
+initial
+begin
+	data[10] = 1'b0;
+end 
+// data[ 9 ]
+initial
+begin
+	data[9] = 1'b0;
+end 
+// data[ 8 ]
+initial
+begin
+	data[8] = 1'b0;
+end 
+// data[ 7 ]
+initial
+begin
+	data[7] = 1'b0;
+end 
+// data[ 6 ]
+initial
+begin
+	data[6] = 1'b0;
+end 
+// data[ 5 ]
+initial
+begin
+	data[5] = 1'b0;
+end 
+// data[ 4 ]
+initial
+begin
+	data[4] = 1'b0;
+end 
+// data[ 3 ]
+initial
+begin
+	data[3] = 1'b0;
+end 
+// data[ 2 ]
+initial
+begin
+	data[2] = 1'b0;
+	data[2] = #640000 1'b1;
+end 
+// data[ 1 ]
+initial
+begin
+	data[1] = 1'b0;
+	data[1] = #320000 1'b1;
+	data[1] = #320000 1'b0;
+	data[1] = #320000 1'b1;
+end 
+// data[ 0 ]
+initial
+begin
+	repeat(3)
+	begin
+		data[0] = 1'b0;
+		data[0] = #160000 1'b1;
+		# 160000;
+	end
+	data[0] = 1'b0;
+end 
+// endereco_escrita[ 7 ]
+initial
+begin
+	endereco_escrita[7] = 1'b0;
+end 
+// endereco_escrita[ 6 ]
+initial
+begin
+	endereco_escrita[6] = 1'b0;
+end 
+// endereco_escrita[ 5 ]
+initial
+begin
+	endereco_escrita[5] = 1'b0;
+end 
+// endereco_escrita[ 4 ]
+initial
+begin
+	endereco_escrita[4] = 1'b0;
+end 
+// endereco_escrita[ 3 ]
+initial
+begin
+	endereco_escrita[3] = 1'b0;
+end 
+// endereco_escrita[ 2 ]
+initial
+begin
+	endereco_escrita[2] = 1'b0;
+	endereco_escrita[2] = #640000 1'b1;
+end 
+// endereco_escrita[ 1 ]
+initial
+begin
+	endereco_escrita[1] = 1'b0;
+	endereco_escrita[1] = #320000 1'b1;
+	endereco_escrita[1] = #320000 1'b0;
+	endereco_escrita[1] = #320000 1'b1;
+end 
+// endereco_escrita[ 0 ]
+initial
+begin
+	repeat(3)
+	begin
+		endereco_escrita[0] = 1'b0;
+		endereco_escrita[0] = #160000 1'b1;
+		# 160000;
+	end
+	endereco_escrita[0] = 1'b0;
+end 
+// read_addr[ 7 ]
+initial
+begin
+	read_addr[7] = 1'b0;
+end 
+// read_addr[ 6 ]
+initial
+begin
+	read_addr[6] = 1'b0;
+end 
+// read_addr[ 5 ]
+initial
+begin
+	read_addr[5] = 1'b0;
+end 
+// read_addr[ 4 ]
+initial
+begin
+	read_addr[4] = 1'b0;
+end 
+// read_addr[ 3 ]
+initial
+begin
+	read_addr[3] = 1'b0;
+end 
+// read_addr[ 2 ]
+initial
+begin
+	read_addr[2] = 1'b0;
+end 
+// read_addr[ 1 ]
+initial
+begin
+	read_addr[1] = 1'b0;
+	read_addr[1] = #880000 1'b1;
+	read_addr[1] = #110000 1'b0;
+end 
+// read_addr[ 0 ]
+initial
+begin
+	read_addr[0] = 1'b0;
+	read_addr[0] = #720000 1'b1;
+	read_addr[0] = #160000 1'b0;
+end 
+endmodule
+

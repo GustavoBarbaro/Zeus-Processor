@@ -1,0 +1,2 @@
+FPGA EP4CE115F29C7 da família
+Cyclone IV

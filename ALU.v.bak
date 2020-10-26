@@ -1,0 +1,26 @@
+module ALU (alu_control, A, B, zero, resp);
+
+	input [5:0] alu_control;
+	input [31:0] A, B;
+	
+	output reg [31:0] resp;
+	output zero;
+	
+	
+	always @ (alu_control, A, B) begin 
+	
+		case (alu_control[5:0])
+			5'b00000 : resp = A + B; //ADICAO
+			5'b00001 : resp = A & B; //AND
+			5'b00010 : resp = A / B; //DIVISAO
+			5'b00011 : resp = A * B; //MULTIPLICACAO
+			5'b00100 : resp = A - B; //SUBTRACAO
+			5'b00101 : resp = A | B; //OR
+			5'b00110 : resp = A ~| B; //NOR
+			5'b00111 : resp = A ^ b; //XOR
+			
+			default resp = 0;
+		endcase
+	end
+	assign zero = (resp == 0); //zero eh vdd se resp tiver zero
+endmodule 
