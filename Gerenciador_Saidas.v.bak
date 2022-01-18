@@ -1,0 +1,9 @@
+module Gerenciador_Saidas (input [31:0] entrada, output [13:0] saida);
+
+
+
+
+
+
+
+endmodule 

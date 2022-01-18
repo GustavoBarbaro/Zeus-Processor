@@ -69,6 +69,39 @@ set_global_assignment -name VECTOR_WAVEFORM_FILE Zeus_Processor_teste.vwf
 set_global_assignment -name VERILOG_FILE Unidade_de_Controle.v
 set_global_assignment -name VECTOR_WAVEFORM_FILE Unidade_de_Controle_Teste.vwf
 set_global_assignment -name VERILOG_FILE Alu_Control.v
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name TIMEQUEST_MULTICORNER_ANALYSIS ON
+set_global_assignment -name SMART_RECOMPILE ON
+set_global_assignment -name SYNTH_TIMING_DRIVEN_SYNTHESIS OFF
+set_global_assignment -name OPTIMIZE_TIMING OFF
+set_global_assignment -name FITTER_EFFORT "FAST FIT"
+set_global_assignment -name OPTIMIZATION_MODE "AGGRESSIVE AREA"
+set_global_assignment -name VERILOG_FILE Divisor_Frequencia.v
+set_global_assignment -name SYNTHESIS_EFFORT FAST
+set_global_assignment -name ROUTER_TIMING_OPTIMIZATION_LEVEL NORMAL
+set_global_assignment -name PHYSICAL_SYNTHESIS_EFFORT FAST
+set_global_assignment -name VERILOG_FILE Display_7_Seg.v
+set_global_assignment -name VERILOG_FILE Atlas_OS.v
+set_global_assignment -name VERILOG_FILE Gerenciador_Saidas.v
+set_global_assignment -name VERILOG_FILE Split_Digitos.v
+set_location_assignment PIN_Y2 -to fpga_clock
+set_location_assignment PIN_G18 -to display_7s[6]
+set_location_assignment PIN_F22 -to display_7s[5]
+set_location_assignment PIN_E17 -to display_7s[4]
+set_location_assignment PIN_L26 -to display_7s[3]
+set_location_assignment PIN_L25 -to display_7s[2]
+set_location_assignment PIN_J22 -to display_7s[1]
+set_location_assignment PIN_H22 -to display_7s[0]
+set_location_assignment PIN_M24 -to display_7s[13]
+set_location_assignment PIN_Y22 -to display_7s[12]
+set_location_assignment PIN_W21 -to display_7s[11]
+set_location_assignment PIN_W22 -to display_7s[10]
+set_location_assignment PIN_W25 -to display_7s[9]
+set_location_assignment PIN_U23 -to display_7s[8]
+set_location_assignment PIN_U24 -to display_7s[7]
+set_global_assignment -name VECTOR_WAVEFORM_FILE testando_Atlas_OS.vwf
+set_global_assignment -name VERILOG_FILE Salva_Saida.v
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top

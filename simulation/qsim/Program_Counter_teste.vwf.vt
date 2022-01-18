@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "09/28/2020 00:41:55"
+// Generated on "01/17/2022 00:06:29"
                                                                                 
 // Verilog Test Bench (with test vectors) for design :                          Program_Counter
 // 
@@ -31,6 +31,8 @@ module Program_Counter_vlg_vec_tst();
 // general purpose registers
 reg [31:0] PC_in;
 reg clock;
+reg confirma_bt;
+reg ler_da_entrada;
 // wires                                               
 wire [31:0] PC;
 wire [31:0] PC_mais_1;
@@ -41,7 +43,9 @@ Program_Counter i1 (
 	.PC(PC),
 	.PC_in(PC_in),
 	.PC_mais_1(PC_mais_1),
-	.clock(clock)
+	.clock(clock),
+	.confirma_bt(confirma_bt),
+	.ler_da_entrada(ler_da_entrada)
 );
 initial 
 begin 
@@ -51,11 +55,11 @@ end
 // clock
 initial
 begin
-	repeat(6)
+	repeat(33)
 	begin
 		clock = 1'b0;
-		clock = #80000 1'b1;
-		# 80000;
+		clock = #15000 1'b1;
+		# 15000;
 	end
 	clock = 1'b0;
 end 
@@ -122,22 +126,22 @@ end
 // PC_in[ 19 ]
 initial
 begin
-	PC_in[19] = 1'b1;
+	PC_in[19] = 1'b0;
 end 
 // PC_in[ 18 ]
 initial
 begin
-	PC_in[18] = 1'b1;
+	PC_in[18] = 1'b0;
 end 
 // PC_in[ 17 ]
 initial
 begin
-	PC_in[17] = 1'b1;
+	PC_in[17] = 1'b0;
 end 
 // PC_in[ 16 ]
 initial
 begin
-	PC_in[16] = 1'b1;
+	PC_in[16] = 1'b0;
 end 
 // PC_in[ 15 ]
 initial
@@ -177,12 +181,12 @@ end
 // PC_in[ 8 ]
 initial
 begin
-	PC_in[8] = 1'b1;
+	PC_in[8] = 1'b0;
 end 
 // PC_in[ 7 ]
 initial
 begin
-	PC_in[7] = 1'b1;
+	PC_in[7] = 1'b0;
 end 
 // PC_in[ 6 ]
 initial
@@ -193,31 +197,75 @@ end
 initial
 begin
 	PC_in[5] = 1'b0;
+	PC_in[5] = #960000 1'b1;
 end 
 // PC_in[ 4 ]
 initial
 begin
 	PC_in[4] = 1'b0;
+	PC_in[4] = #480000 1'b1;
+	PC_in[4] = #480000 1'b0;
 end 
 // PC_in[ 3 ]
 initial
 begin
+	repeat(2)
+	begin
+		PC_in[3] = 1'b0;
+		PC_in[3] = #240000 1'b1;
+		# 240000;
+	end
 	PC_in[3] = 1'b0;
 end 
 // PC_in[ 2 ]
 initial
 begin
+	repeat(4)
+	begin
+		PC_in[2] = 1'b0;
+		PC_in[2] = #120000 1'b1;
+		# 120000;
+	end
 	PC_in[2] = 1'b0;
 end 
 // PC_in[ 1 ]
 initial
 begin
+	repeat(8)
+	begin
+		PC_in[1] = 1'b0;
+		PC_in[1] = #60000 1'b1;
+		# 60000;
+	end
 	PC_in[1] = 1'b0;
 end 
 // PC_in[ 0 ]
 initial
 begin
+	repeat(16)
+	begin
+		PC_in[0] = 1'b0;
+		PC_in[0] = #30000 1'b1;
+		# 30000;
+	end
 	PC_in[0] = 1'b0;
+	PC_in[0] = #30000 1'b1;
+end 
+
+// confirma_bt
+initial
+begin
+	confirma_bt = 1'b0;
+	confirma_bt = #310000 1'b1;
+	confirma_bt = #170000 1'b0;
+end 
+
+// ler_da_entrada
+initial
+begin
+	ler_da_entrada = 1'b0;
+	ler_da_entrada = #120000 1'b1;
+	ler_da_entrada = #360000 1'b0;
 end 
 endmodule
 

@@ -1,16 +1,16 @@
-Fitter Status : Successful - Thu Oct 22 20:18:02 2020
+Fitter Status : Successful - Mon Jan 17 22:35:16 2022
 Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 Revision Name : Zeus_Processor
 Top-level Entity Name : Zeus_Processor
 Family : Cyclone IV E
 Device : EP4CE115F29C7
 Timing Models : Final
-Total logic elements : 1,989 / 114,480 ( 2 % )
-    Total combinational functions : 1,861 / 114,480 ( 2 % )
-    Dedicated logic registers : 409 / 114,480 ( < 1 % )
-Total registers : 409
-Total pins : 225 / 529 ( 43 % )
+Total logic elements : 870 / 114,480 ( < 1 % )
+    Total combinational functions : 823 / 114,480 ( < 1 % )
+    Dedicated logic registers : 489 / 114,480 ( < 1 % )
+Total registers : 489
+Total pins : 350 / 529 ( 66 % )
 Total virtual pins : 0
-Total memory bits : 8,704 / 3,981,312 ( < 1 % )
-Embedded Multiplier 9-bit elements : 6 / 532 ( 1 % )
+Total memory bits : 10,240 / 3,981,312 ( < 1 % )
+Embedded Multiplier 9-bit elements : 0 / 532 ( 0 % )
 Total PLLs : 0 / 4 ( 0 % )

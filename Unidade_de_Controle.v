@@ -9,6 +9,9 @@ module Unidade_de_Controle
 	output reg MemWrite,
 	output reg MemRead,
 	output reg MemToReg,
+	output reg print,
+	output reg ler_da_entrada,
+	output reg confirma_entrada,
 	output reg [5:0] Sinal_da_Conta);
 
 	always @ (Op_Code) // nao esquecer de fazer o caso default
@@ -24,6 +27,9 @@ module Unidade_de_Controle
 				MemWrite = 0;
 				MemRead = 0;
 				MemToReg = 0;
+				print = 0;
+				ler_da_entrada = 0;
+				confirma_entrada = 0;
 			end
 			
 			//TIPO I (IMMEDIATE)
@@ -38,6 +44,9 @@ module Unidade_de_Controle
 				MemRead = 0;
 				MemToReg = 0;
 				Sinal_da_Conta = 6'b000000;//adicao
+				print = 0;
+				ler_da_entrada = 0;
+				confirma_entrada = 0;
 			end
 			
 			6'b000010: begin // beq
@@ -50,6 +59,9 @@ module Unidade_de_Controle
 				MemRead = 0;
 				MemToReg = 0;
 				Sinal_da_Conta = 6'b000100; //subtração
+				print = 0;
+				ler_da_entrada = 0;
+				confirma_entrada = 0;
 			end
 			
 			6'b000011: begin //blez
@@ -62,6 +74,9 @@ module Unidade_de_Controle
 				MemRead = 0;
 				MemToReg = 0;
 				Sinal_da_Conta = 6'b000100; //subtração
+				print = 0;
+				ler_da_entrada = 0;
+				confirma_entrada = 0;
 			end
 			
 			6'b000100: begin //bne
@@ -74,6 +89,9 @@ module Unidade_de_Controle
 				MemRead = 0;
 				MemToReg = 0;
 				Sinal_da_Conta = 6'b000100; //subtração
+				print = 0;
+				ler_da_entrada = 0;
+				confirma_entrada = 0;
 			end
 			
 			6'b000101: begin //bgtz
@@ -86,6 +104,9 @@ module Unidade_de_Controle
 				MemRead = 0;
 				MemToReg = 0;
 				Sinal_da_Conta = 6'b000000; //adição
+				print = 0;
+				ler_da_entrada = 0;
+				confirma_entrada = 0;
 			end
 			
 			6'b000110: begin //lw
@@ -98,6 +119,9 @@ module Unidade_de_Controle
 				MemRead = 1;
 				MemToReg = 1;
 				Sinal_da_Conta = 6'b000000; //adição
+				print = 0;
+				ler_da_entrada = 0;
+				confirma_entrada = 0;
 			end
 			
 			6'b000111: begin // sw
@@ -110,6 +134,9 @@ module Unidade_de_Controle
 				MemRead = 0;
 				MemToReg = 0;
 				Sinal_da_Conta = 6'b000000;// adição
+				print = 0;
+				ler_da_entrada = 0;
+				confirma_entrada = 0;
 			end
 			
 			6'b001000: begin // j
@@ -122,7 +149,56 @@ module Unidade_de_Controle
 				MemRead = 0;
 				MemToReg = 0;
 				Sinal_da_Conta = 6'b000000;
+				print = 0;
+				ler_da_entrada = 0;
+				confirma_entrada = 0;
 			end
+			
+			6'b001100: begin // OUTPUT
+				RegDst = 0;
+				RegWrite = 0;
+				AluSrc = 0;
+				ALUOp = 0; //manter zerado
+				PCSrc = 0;
+				MemWrite = 0;
+				MemRead = 0;
+				MemToReg = 0;
+				Sinal_da_Conta = 6'b000000;
+				print = 1;
+				ler_da_entrada = 0;
+				confirma_entrada = 0;
+			end
+			
+			6'b001011: begin // INPUT
+				RegDst = 0;
+				RegWrite = 1;
+				AluSrc = 0;
+				ALUOp = 0; //manter zerado
+				PCSrc = 0;
+				MemWrite = 0;
+				MemRead = 0;
+				MemToReg = 0;
+				Sinal_da_Conta = 6'b000000;
+				print = 0;
+				ler_da_entrada = 0;
+				confirma_entrada = 1;
+			end
+			
+			6'b001101: begin // WAIT
+				RegDst = 0;
+				RegWrite = 0;
+				AluSrc = 0;
+				ALUOp = 0; //manter zerado
+				PCSrc = 0;
+				MemWrite = 0;
+				MemRead = 0;
+				MemToReg = 0;
+				Sinal_da_Conta = 6'b000000;
+				print = 0;
+				ler_da_entrada = 1;
+				confirma_entrada = 0;
+			end
+			
 			
 			default: begin
 				RegDst = 0;
@@ -134,6 +210,9 @@ module Unidade_de_Controle
 				MemRead = 0;
 				MemToReg = 0;
 				Sinal_da_Conta = 6'b000000;
+				print = 0;
+				ler_da_entrada = 0;
+				confirma_entrada = 0;
 			end
 		
 		endcase
